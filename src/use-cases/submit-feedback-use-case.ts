@@ -28,7 +28,7 @@ export class SubmitFeedbackUseCase {
       throw new Error('Invalid screenshot format.');
     }
 
-    await this.feedbacksRepository.create({
+    const feedback = await this.feedbacksRepository.create({
       type,
       comment,
       screenshot
@@ -43,5 +43,7 @@ export class SubmitFeedbackUseCase {
         `</div>`,
       ].join('\n')
     });
+
+    return feedback;
   }
 }
