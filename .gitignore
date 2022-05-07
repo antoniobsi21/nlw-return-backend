@@ -57,3 +57,5 @@ api-extractor.json
 **/.pnp.*
 
 crowdin-cli.jar
+
+/dist
